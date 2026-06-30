@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8; /* 웜 오프화이트 — 기본 배경 */
+  --surface: #ffffff; /* 순백 — 본문 콘텐츠 섹션 */
+  --foreground: #1a1815; /* 오프블랙(ink) */
+  --muted-text: #6e665a; /* 보조 텍스트 (대비 ≥4.5:1) */
+  --line: #d6cfc2; /* 디바이더 */
+  --bronze: #8c7b5e; /* 액센트 */
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ivory: var(--background); /* → bg-ivory */
+  --color-ink: var(--foreground); /* → text-ink / bg-ink */
+  --color-muted: var(--muted-text); /* → text-muted */
+  --color-line: var(--line); /* → border-line */
+  --color-bronze: var(--bronze); /* → text-bronze / bg-bronze */
+  --font-sans: var(--font-noto-sans-kr);
+  --font-serif: var(--font-noto-serif-kr);
+  --font-accent: var(--font-cormorant);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans-kr), Arial, Helvetica, sans-serif;
+  word-break: keep-all; /* 한국어 가독성 — 단어 단위 줄바꿈 */
+  line-height: 1.75; /* 50대 가독성 */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 접근성 (§E) — 키보드 포커스 가시화: 브론즈 + outline */
+:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 2px;
+}
+
+/* 히어로 — 은은한 Ken Burns (선명한 단지 CG 위, 인위적 모션 최소). reduced-motion 시 아래 미디어쿼리로 정지. */
+@keyframes kenburns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+.hero-kenburns {
+  animation: kenburns 32s ease-out forwards;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,5 @@
+User-agent: *
+
+Sitemap: https://www.gallerycenter.co.kr/sitemap.xml
+
+#DaumWebMasterTool:2c6dc1ca8545c7aff4a745749aadce3169b7987e24b059a18c358be53a327f07:9QC48RIDoACLXH3FbFNbCg==

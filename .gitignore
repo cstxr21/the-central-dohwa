@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 배포 제외 — 추출 원자료(이미지·PDF·OCR)·제작 프로세스 문서 (사이트 빌드와 무관, 로컬 보관용)
+/extraction/
+/docs/
+# 배포 제외 — 제작/검증 도구·QA 산출물 (next build 불사용, 로컬 npm run verify 용으로 보관)
+/scripts/
+/reports/
