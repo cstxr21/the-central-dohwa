@@ -31,8 +31,8 @@ export const SUB = {
 } as const;
 
 export const HOME = {
-  hero: { src: "/images/hero/doosan-the-central-dohwa-hero-02.webp", alt: "두산위브 더센트럴 도화 단지 조감도", ratio: 3840 / 1940 },
-  overview: { src: "/images/overview/doosan-the-central-dohwa-overview-01.webp", alt: "두산위브 더센트럴 도화 사업개요 투시도", ratio: 1920 / 970 },
+  hero: { src: "/images/hero/doosan-the-central-dohwa-hero-main.webp", alt: "두산위브 더센트럴 도화 야경 조감도", ratio: 1920 / 970 },
+  overview: { src: "/images/hero/doosan-the-central-dohwa-overview-main.webp", alt: "두산위브 더센트럴 도화 사업개요 조감도", ratio: 3840 / 1940 },
   location: { src: "/images/location/doosan-the-central-dohwa-location-05.webp", alt: "두산위브 더센트럴 도화 입지 안내도", ratio: 4000 / 3317 },
   premium: { src: "/images/premium/doosan-the-central-dohwa-premium-01.webp", alt: "두산위브 더센트럴 도화 프리미엄 안내", ratio: 1200 / 2570 },
   complex: { src: "/images/complex/doosan-the-central-dohwa-complex-03.webp", alt: "두산위브 더센트럴 도화 단지 투시도", ratio: 1920 / 1358 },

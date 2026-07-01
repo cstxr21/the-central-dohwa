@@ -43,27 +43,38 @@ export default function Home() {
     <>
       <JsonLd data={residenceJsonLd("/")} />
       {/* ───── Hero ───── */}
-      <section className="relative flex min-h-[calc(100svh_-_56px)] items-end overflow-hidden lg:h-screen">
-        <Image src={HOME.hero.src} alt={HOME.hero.alt} fill priority sizes="(max-width: 1024px) 200vw, 100vw" className="hero-kenburns object-cover" />
-        {/* 상단 스크림(흰 nav 가독) + 좌하단 텍스트 스크림 */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/45 to-transparent" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-black/55 via-black/20 to-transparent" aria-hidden="true" />
+      <section className="relative flex min-h-[calc(100svh_-_56px)] items-start overflow-hidden lg:h-screen">
+        {/* 야경 조감: 타워는 우측·하늘은 좌상단 → 좁은 화면에선 타워를 살리도록 우측 포커스 */}
+        <Image
+          src={HOME.hero.src}
+          alt={HOME.hero.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="hero-kenburns object-cover object-[70%_center] sm:object-[62%_center] lg:object-center"
+        />
+        {/* 스크림 최소화 — 텍스트가 전 화면 상단에 있어 상단만 가독용, 하단은 최소 */}
+        <div className="absolute inset-x-0 top-0 h-2/5 bg-gradient-to-b from-black/45 via-black/15 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/20 to-transparent" aria-hidden="true" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-20 pt-32 text-white sm:px-10">
-          <p className="font-accent text-[15px] italic tracking-[0.3em] text-white/90 sm:text-[18px]">
+        <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-16 pt-24 text-white sm:px-10 sm:pt-28 lg:pt-36">
+          <p className="flex items-center gap-3 font-accent text-[13px] italic tracking-[0.3em] text-white/85 sm:text-[16px]">
+            <span className="h-px w-8 bg-bronze" aria-hidden="true" />
             DOOSAN We&apos;ve · THE CENTRAL DOHWA
           </p>
-          <h1 className="mt-4 font-serif text-[38px] font-semibold leading-[1.15] tracking-tight sm:text-7xl">
+          <h1 className="mt-5 font-serif text-[40px] font-semibold leading-[1.12] tracking-tight [text-shadow:0_2px_24px_rgba(0,0,0,0.35)] sm:text-7xl">
             {site.name}
           </h1>
-          <p className="mt-5 text-[17px] text-white/90 sm:text-xl">인천 미추홀구 도화동 · 도화4구역 재개발 · 660세대</p>
+          <p className="mt-5 max-w-[34ch] text-[16px] leading-relaxed text-white/90 sm:text-xl">
+            인천 미추홀구 도화동 · 도화4구역 재개발 · 660세대
+          </p>
 
           {/* 핵심지표 — 헤어라인 행 */}
-          <dl className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/30 pt-5">
+          <dl className="mt-8 grid max-w-[440px] grid-cols-2 gap-x-6 gap-y-4 border-t border-white/25 pt-5 sm:flex sm:max-w-none sm:flex-wrap sm:gap-x-10">
             {STATS.map((s) => (
               <div key={s.label}>
-                <dt className="text-[13px] tracking-[0.15em] text-white/60">{s.label}</dt>
-                <dd className="mt-1 text-[17px] font-medium">{s.value}</dd>
+                <dt className="text-[12px] tracking-[0.15em] text-white/60 sm:text-[13px]">{s.label}</dt>
+                <dd className="mt-1 text-[16px] font-medium sm:text-[17px]">{s.value}</dd>
               </div>
             ))}
           </dl>
@@ -73,7 +84,7 @@ export default function Home() {
             <Link href={REGISTER} className="inline-flex h-14 items-center bg-bronze px-8 text-[17px] text-ivory transition-opacity hover:opacity-90">
               관심고객 등록
             </Link>
-            <a href={PHONE_TEL} aria-label={`전화 상담 ${PHONE}`} className="inline-flex h-14 items-center gap-2 border border-white px-6 text-[17px] transition-colors hover:bg-white hover:text-ink">
+            <a href={PHONE_TEL} aria-label={`전화 상담 ${PHONE}`} className="inline-flex h-14 items-center gap-2 border border-white/80 px-6 text-[17px] backdrop-blur-sm transition-colors hover:bg-white hover:text-ink">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
               </svg>
