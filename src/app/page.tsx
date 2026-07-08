@@ -15,9 +15,9 @@ const PHONE_TEL = "tel:18009570";
 const REGISTER = "/modelhouse#reservation";
 
 export const metadata: Metadata = {
-  title: { absolute: "두산위브 더센트럴 도화 | 모델하우스 방문예약·분양안내" },
+  title: { absolute: "두산위브 더센트럴 도화" },
   description:
-    "두산위브 더센트럴 도화 모델하우스 방문예약·분양안내. 인천 미추홀구 도화동 660세대 사업개요·입지·프리미엄·분양 상담 안내.",
+    "인천 미추홀구 도화동 660세대 두산위브 더센트럴 도화. 모델하우스 방문예약·분양문의 1800-9570",
   alternates: { canonical: "/" },
   openGraph: {
     title: "두산위브 더센트럴 도화 — 인천 미추홀구 도화동 재개발 660세대",
