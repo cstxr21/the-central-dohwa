@@ -18,7 +18,7 @@ export const site = {
   // 검색엔진 verification 토큰 (발급 후 교체 — head meta, robots 금지)
   verification: {
     naver: "",
-    google: "",
+    google: "6dLoO3SjCVnCPfmqec0q7xEElNuT3-BirLJgobI_n4E",
   },
   // 3주체 (분양광고 푸터 — content.ts.parties와 동기)
   parties: {

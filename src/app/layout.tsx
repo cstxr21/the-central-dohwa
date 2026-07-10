@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     description: site.description,
     images: [{ url: site.ogImage, width: 1200, height: 630, alt: `${site.name} 조감도` }],
   },
-  // verification(naver/google) 토큰은 9단계에서 발급 후 site.ts에 채워 추가.
+  // verification 토큰은 site.ts에서 관리 — 빈 값은 태그 미출력.
+  verification: {
+    ...(site.verification.google ? { google: site.verification.google } : {}),
+    ...(site.verification.naver ? { other: { "naver-site-verification": site.verification.naver } } : {}),
+  },
 };
 
 export default function RootLayout({
