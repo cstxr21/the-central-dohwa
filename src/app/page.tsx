@@ -111,7 +111,7 @@ export default function Home() {
       {/* ───── 섹션 매거진 블록 01~07 ───── */}
       <MagBlock no="01" en="Overview" title="사업개요" bg="bg-background" image={HOME.overview.src} alt={HOME.overview.alt} ratio={HOME.overview.ratio} href="/overview" linkLabel="사업개요 자세히 보기">
         <p>
-          인천 미추홀구 도화동 53-28번지 일원에 도화4구역 주택재개발로 공급되는 단지입니다. 지하 2층부터 지상 39층까지 7개 동, 총
+          두산위브 더센트럴 도화는 인천 미추홀구 도화동 53-28번지 일원에 도화4구역 주택재개발로 공급되는 단지입니다. 지하 2층부터 지상 39층까지 7개 동, 총
           660세대 규모이며 이 가운데 412세대가 일반분양됩니다. 시행은 도화4구역 주택재개발정비사업조합, 시공은 두산건설이 맡았습니다.
         </p>
       </MagBlock>
@@ -146,14 +146,14 @@ export default function Home() {
 
       <MagBlock no="06" en="Sales" title="분양안내" bg="bg-surface" reverse image={HOME.sales.src} alt={HOME.sales.alt} ratio={HOME.sales.ratio} href="/sales" linkLabel="분양가·일정 안내">
         <p>
-          분양가와 공급 조건은 입주자모집공고 기준으로 안내합니다. 청약 접수는 마감되어, 현재 잔여 세대를 대상으로 선착순 동·호 지정
+          두산위브 더센트럴 도화 분양가와 공급 조건은 입주자모집공고 기준으로 안내합니다. 청약 접수는 마감되어, 현재 잔여 세대를 대상으로 선착순 동·호 지정
           계약을 진행하고 있습니다. 자세한 공급 정보는 분양안내에서 확인하세요.
         </p>
       </MagBlock>
 
       <MagBlock no="07" en="Model House" title="모델하우스" bg="bg-background" image={HOME.modelhouse.src} alt={HOME.modelhouse.alt} ratio={HOME.modelhouse.ratio} href="/modelhouse" linkLabel="방문 예약 안내">
         <p>
-          견본주택은 인천 미추홀구 숭의동 117-11번지에 운영합니다. 관람은 사전 예약제로 진행되며, 관심고객으로 등록하시면 방문 예약을
+          모델하우스는 인천 미추홀구 숭의동 117-11번지에 운영합니다. 관람은 사전 예약제로 진행되며, 관심고객으로 등록하시면 방문 예약을
           도와드립니다.
         </p>
       </MagBlock>
@@ -252,7 +252,7 @@ export default function Home() {
             </ul>
             <div className="mt-8 space-y-3 border-t border-line pt-6 text-[17px]">
               <p className="text-ink">
-                <span className="text-bronze">📍 견본주택</span> 인천 미추홀구 숭의동 117-11 · 관람 10:00~18:00 · 사전 예약 관람
+                <span className="text-bronze">📍 모델하우스</span> 인천 미추홀구 숭의동 117-11 · 관람 10:00~18:00 · 사전 예약 관람
               </p>
               <p className="text-ink">
                 <span className="text-bronze">📞 분양문의</span> <span className="font-serif text-2xl">{PHONE}</span> · 선 예약 후 방문 안내
@@ -286,8 +286,8 @@ export default function Home() {
             <p>
               일반분양 412세대는 특별공급 212세대(기관추천·다자녀·신혼부부·노부모부양·생애최초)와 일반공급 200세대로 나뉘어
               공급되었습니다. 청약 접수가 마감된 현재는 잔여 세대를 대상으로 선착순 동·호 지정 계약이 진행되고 있으며, 비규제지역
-              민영주택으로 재당첨제한·거주의무는 적용되지 않습니다. 입주는 2028년 11월 예정이고, 견본주택은 인천 미추홀구 숭의동
-              117-11번지에서 사전 예약제로 운영합니다. 분양가·공급 조건 등 자세한 금액은 입주자모집공고 기준으로{" "}
+              민영주택으로 재당첨제한·거주의무는 적용되지 않습니다. 입주는 2028년 11월 예정이고, 모델하우스는 인천 미추홀구 숭의동
+              117-11번지에서 사전 예약제로 운영합니다. 타입별 금액과 납부조건은 입주자모집공고 기준으로{" "}
               <Link href="/sales" className="text-ink underline underline-offset-4 hover:text-bronze">
                 분양안내
               </Link>
